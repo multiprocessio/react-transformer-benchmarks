@@ -1,0 +1,8 @@
+{
+  "name": "swc",
+  "dependencies": {
+    "@swc/cli": "^0.1.51",
+    "@swc/core": "^1.2.108",
+    "esbuild": "^0.13.13"
+  }
+}

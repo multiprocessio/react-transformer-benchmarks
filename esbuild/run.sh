@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex
 
-yarn esbuild --outdir=build $1/*.jsx
+yarn esbuild --outdir=build $(find $1 -name '*.jsx')

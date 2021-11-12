@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-benchmark-generator": "https://github.com/multiprocessio/react-benchmark-generator"
+  }
+}
