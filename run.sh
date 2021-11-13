@@ -5,7 +5,7 @@ set -e
 rm runlog || echo "No runlog"
 
 transformers="esbuild babel typescript swc"
-sizes="large"
+sizes="small medium large"
 times="1 2 3 4 5"
 
 echo "name,size,sample,time"
