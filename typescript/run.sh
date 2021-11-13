@@ -2,4 +2,4 @@
 
 set -e
 
-yarn tsc --outDir build --allowJs $1/*.jsx
+yarn tsc --outDir build --allowJs --rootDir $1 $(find $1 -name '*.jsx')
