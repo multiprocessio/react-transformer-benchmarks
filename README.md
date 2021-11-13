@@ -37,13 +37,28 @@ it with SQLite.
 
 ```bash
 $ ./run.sh | tee results.csv
-$ echo results.csv | sqlite3 bench.db ".import --csv /dev/stdin results"
+$ sqlite3
+sqlite> .mode csv
+sqlite> .import results.csv results
+^D
 ```
 
 Then you can run queries:
 
-```bash
-$ sqlite3 bench.db 'SELECT name, size, AVG(time) FROM results GROUP BY name, size ORDER BY (AVG time) DESC'
+```csv
+$ sqlite3 bench.db 'SELECT name, size, AVG(time) FROM results GROUP BY name, size ORDER BY size DESC, AVG(time) ASC'
+esbuild,small,0.33284
+swc,small,0.38476
+babel,small,1.44288
+typescript,small,2.32456
+esbuild,medium,0.80556
+swc,medium,0.97588
+typescript,medium,8.2286
+babel,medium,12.8434
+esbuild,large,3.06556
+swc,large,3.8216
+typescript,large,37.28584
+babel,large,70.57572
 ```
 
 ## Debugging
