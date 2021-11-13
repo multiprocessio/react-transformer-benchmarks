@@ -40,7 +40,7 @@ $ ./run.sh | tee results.csv
 $ sqlite3
 sqlite> .mode csv
 sqlite> .import results.csv results
-^D
+sqlite> ^D
 ```
 
 Then you can run queries:
