@@ -5,6 +5,8 @@ using
 [react-benchmark-generator](https://github.com/multiprocessio/react-benchmark-generator)
 and runs transformers against these projects.
 
+Read the full blog post [here](https://datastation.multiprocess.io/blog/2021-11-13-benchmarking-esbuild-swc-typescript-babel.html).
+
 ## Setup
 
 Once you have this repo, run:
