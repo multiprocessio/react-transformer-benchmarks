@@ -36,7 +36,7 @@ If you redirect the run script output to a file you can easily analyze
 it with SQLite.
 
 ```bash
-$ ./run.sh > results.csv
+$ ./run.sh | tee results.csv
 $ echo results.csv | sqlite3 bench.db ".import --csv /dev/stdin results"
 ```
 
@@ -45,3 +45,9 @@ Then you can run queries:
 ```bash
 $ sqlite3 bench.db 'SELECT name, size, AVG(time) FROM results GROUP BY name, size ORDER BY (AVG time) DESC'
 ```
+
+## Debugging
+
+Output for all runs is redirected to `./runlog` in the root of this
+repo. You can `tail -f ./runlog` to follow all tests as they are run
+and see error output if something fails.

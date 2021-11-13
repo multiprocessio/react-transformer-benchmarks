@@ -19,5 +19,5 @@ done
 large_samples="sample1 sample2 sample3 sample4 sample5"
 for sample in $large_samples; do
     mkdir -p tests/large/$sample
-    node ./node_modules/react-benchmark-generator/generate.js --outdir tests/large/$sample --nfiles 5000
+    node ./node_modules/react-benchmark-generator/generate.js --outdir tests/large/$sample --nfiles 100 --depth 5
 done

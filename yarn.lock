@@ -8,7 +8,7 @@ faker@^5.5.3:
   integrity sha512-wLTv2a28wjUyWkbnX7u/ABZBkUkIF2fCd73V6P2oFqEGEktDfzWx4UxrSqtPRw0xPRAcjeAOIiJWqZm3pP4u3g==
 
 "react-benchmark-generator@https://github.com/multiprocessio/react-benchmark-generator":
-  version "0.1.0"
-  resolved "https://github.com/multiprocessio/react-benchmark-generator#534534cdb1794fc822040c3b960b07fd554db6cb"
+  version "0.3.0"
+  resolved "https://github.com/multiprocessio/react-benchmark-generator#df1995a2fc3a618e738131a07f59609c9230ca04"
   dependencies:
     faker "^5.5.3"

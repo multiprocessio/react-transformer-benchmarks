@@ -2,8 +2,10 @@
 
 set -e
 
+rm runlog || echo "No runlog"
+
 transformers="esbuild babel typescript swc"
-sizes="small medium"
+sizes="large"
 times="1 2 3 4 5"
 
 echo "name,size,sample,time"
@@ -19,7 +21,7 @@ for size in $sizes; do
 		fi
 		pushd ./$transformer >/dev/null 2>&1
 		rm -rf ./build
-		res="$( TIMEFORMAT=%R; time ( ./run.sh $sample >/dev/null 2>&1 ) 2>&1 1>/dev/null )"
+		res="$( TIMEFORMAT=%R; time ( ./run.sh $sample >>../runlog 2>&1 ) 2>&1 1>/dev/null )"
 		echo "$transformer,$size,$dir,$res"
 		popd >/dev/null 2>&1
 	    done
